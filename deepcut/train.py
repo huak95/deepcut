@@ -184,7 +184,8 @@ def train_model(best_processed_path, weight_path='../weight/model_weight.h5', ve
 
     # train model
     model = get_convo_nn2()
-    train_params = [(10, 256), (3, 512), (3, 2048), (3, 4096), (3, 8192)]
+#     train_params = [(10, 256), (3, 512), (3, 2048), (3, 4096), (3, 8192)]
+    train_params = [(10, 4096)]
     for (epochs, batch_size) in train_params:
         print("train with {} epochs and {} batch size".format(epochs, batch_size))
         if validation_set:
